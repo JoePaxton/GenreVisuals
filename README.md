@@ -25,7 +25,7 @@ files in the current working directory and create spectrogram ```png``` files, t
 for the song's ```timbre```  and ```pitch```, and a 3D plot displaying the ```timbre``` and ```pitch``` by 
  ```segments```. After I had all of the saved ```specgram``` ```png``` files in the current working directory,
 I compared the frequency of each genre against each other by pulling the 30 ```specgrams``` into a ```word``` document, 
-[Comparison.docx]. Since, this file was too big and got truncated, you can view to seperate ```png``` files that
+[Comparison.docx]. Since, this file was too big and got truncated, you can view two seperate ```png``` files that
 are screen shots of the ```word``` document. You can see the spectrograms for the first 6 genres here: [genres.png].
 The last 4 genres are displayed in a screen shot as well in [genres1.png].
 
