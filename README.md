@@ -1,4 +1,4 @@
-##Spectrograms for Different Genres
+##Visuals for Different Genres
 
 **Purpose**
 
