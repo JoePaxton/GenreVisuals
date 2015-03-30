@@ -16,8 +16,8 @@ I realized that their music in all of the genres were in the ```au``` format. In
 there are 10 genres with 100 songs each having an elapsed time of 30 seconds. In the [GTZAN Analysis],
 the [GTZAN Dataset] used the Echo Nest Musical Fingerprinter, which queries a database of about 30,000,000
 songs. The Audio fingerprinting service discontinued in January 2015. You could set up your own server
-with their old data. The fingerprinting algorithm gets a *fingerprint* for a song from an audio clip.
-Then the *fingerprint* can be used to find the song name, artist, year, and etc. I selected 30 audio 
+with their old data if you wanted to. The fingerprinting algorithm gets a *fingerprint* for a song from 
+an audio clip and the *fingerprint* can be used to find the song name, artist, year, and etc. I selected 30 audio 
 files from the [GTZAN Dataset], 3 from each genre and wrote code to spin through the directory and convert
 all the ```au``` audio files to the ```wav``` format. The dataset was already in mono conversion as opposed
 to the stereo sound. Once the conversion was done, I was then able to write code to find all the ```wav``` 
