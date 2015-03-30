@@ -2,7 +2,9 @@
 
 **Purpose**
 
-Determine whether there were visual similarities by genre in spectrograms for songs.
+Determine whether there were visual similarities by genre in spectrograms and other
+visuals by cycling through my directory that holds 30 songs in total, where there
+are 3 songs for 10 different genres.
 
 **Background**
 
