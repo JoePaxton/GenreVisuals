@@ -1,9 +1,11 @@
 ##Spectrograms for Different Genres
 
 **Purpose**
+
 Determine whether there were visual similarities by genre in spectrograms for songs.
 
 **Background**
+
 I wanted to see if there was a distinct difference between genres by investigating
 the use of ```specgram``` in ```python```. I got familiar with ```ffmpeg.exe``` so I could convert
  ```mp3``` files to ```wav``` as mono and not speaker. While doing some research for data sets
@@ -20,7 +22,10 @@ to the stereo sound. Once the conversion was done, I was then able to write code
 files in the current working directory and create spectrogram ```png``` files, two self similarity matrices
 for the song's ```timbre```  and ```pitch```, and a 3D plot displaying the ```timbre``` and ```pitch``` by 
  ```segments```. After I had all of the saved ```specgram``` ```png``` files in the current working directory,
-I compared the frequency of each genre against each other by pulling the 30 ```specgrams``` into a ```word``` document, [Comparison.docx].
+I compared the frequency of each genre against each other by pulling the 30 ```specgrams``` into a ```word``` document, 
+[Comparison.docx]. Since, this file was too big and got truncated, you can view to seperate ```png``` files that
+are screen shots of the ```word``` document. You can see the spectrograms for the first 6 genres here: [genres.png].
+The last 4 genres are displayed in a screen shot as well in [genres1.png].
 
 
 **Code Explanation**
@@ -39,4 +44,6 @@ I compared the frequency of each genre against each other by pulling the 30 ```s
 [Echo Nest Fingerprinting]: https://www.ee.columbia.edu/~dpwe/pubs/EllisWJL10-ENfprint.pdf
 [convertAU.py]: https://github.com/JoePaxton/genreVisuals/blob/master/_convertAU.py
 [spectograms.py]: https://github.com/JoePaxton/genreVisuals/blob/master/_spectrograms.py
-[Comparison.docx]: 
+[Comparison.docx]: https://github.com/JoePaxton/GenreVisuals/blob/master/Comparison.docx
+[genres.png]: https://github.com/JoePaxton/GenreVisuals/blob/master/genres.png
+[genres1.png]: https://github.com/JoePaxton/GenreVisuals/blob/master/genres1.png
