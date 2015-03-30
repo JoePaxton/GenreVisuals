@@ -47,7 +47,7 @@ for filename in os.listdir(cwd):
  ```
 **Implementation**
  
-[conversionAU.py]
+[convertAU.py]
 [genreVisuals.py]
 
 **Resources**
@@ -62,7 +62,7 @@ for filename in os.listdir(cwd):
 [GTZAN Dataset]: http://marsyasweb.appspot.com/download/data_sets/
 [Echo Nest Fingerprinting]: https://www.ee.columbia.edu/~dpwe/pubs/EllisWJL10-ENfprint.pdf
 [convertAU.py]: https://github.com/JoePaxton/genreVisuals/blob/master/convertAU.py
-[spectograms.py]: https://github.com/JoePaxton/genreVisuals/blob/master/genreVisuals.py
+[genreVisuals.py]: https://github.com/JoePaxton/genreVisuals/blob/master/genreVisuals.py
 [Comparison.docx]: https://github.com/JoePaxton/GenreVisuals/blob/master/Comparison.docx
 [genres.png]: https://github.com/JoePaxton/GenreVisuals/blob/master/genres.png
 [genres1.png]: https://github.com/JoePaxton/GenreVisuals/blob/master/genres1.png
