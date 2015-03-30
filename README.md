@@ -30,8 +30,25 @@ are screen shots of the ```word``` document. You can see the spectrograms for th
 The last 4 genres are displayed in a screen shot as well in [genres1.png].
 
 
-**Code Explanation**
+**Converting Files**
 
+This snippet of code from [conversionAU.py] simply goes through your current working directory, ```cwd``` and finds
+all the files that end with ```au``` and converts them into a ```wav``` file assuming you have ```ffmpeg.exe```. 
+Make sure that your ```cmdline``` variable holds the correct path to your ```ffmpeg.exe``` program.
+
+ ```python
+for filename in os.listdir(cwd):
+	if filename.endswith('.au'):
+		count=count+1
+		cmdline = 'C:\Users\Joe\Anaconda\ffmpeg.exe -i ' + filename + '  ' + filename + '.wav'
+		print 'Constructed cmdline =', cmdline
+		subprocess.call(cmdline)
+
+ ```
+**Implementation**
+ 
+[conversionAU.py]
+[genreVisuals.py]
 
 **Resources**
   
@@ -44,8 +61,8 @@ The last 4 genres are displayed in a screen shot as well in [genres1.png].
 [GTZAN Analysis]: https://stevetjoa.com/static/p7.pdf
 [GTZAN Dataset]: http://marsyasweb.appspot.com/download/data_sets/
 [Echo Nest Fingerprinting]: https://www.ee.columbia.edu/~dpwe/pubs/EllisWJL10-ENfprint.pdf
-[convertAU.py]: https://github.com/JoePaxton/genreVisuals/blob/master/_convertAU.py
-[spectograms.py]: https://github.com/JoePaxton/genreVisuals/blob/master/_spectrograms.py
+[convertAU.py]: https://github.com/JoePaxton/genreVisuals/blob/master/convertAU.py
+[spectograms.py]: https://github.com/JoePaxton/genreVisuals/blob/master/genreVisuals.py
 [Comparison.docx]: https://github.com/JoePaxton/GenreVisuals/blob/master/Comparison.docx
 [genres.png]: https://github.com/JoePaxton/GenreVisuals/blob/master/genres.png
 [genres1.png]: https://github.com/JoePaxton/GenreVisuals/blob/master/genres1.png
