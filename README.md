@@ -49,7 +49,9 @@ This snippet of code from [genreVisuals.py] gets the ```wav``` file information,
 is the ```sound_info``` and the ```frame_rate```. The ```getframerate()``` function returns
 the sampling frequency and the ```fromstring``` function reads the frames of the audio. When
 you import ```wave``` you can access all of these functions. Going over the [wav] module will 
-explain these functions as well. 
+explain these functions as well. This function gets the ```frame_rate``` and the data to create
+the ```specgrams``` and other visuals you can look at in the code. The data is a one dimensional
+array of many values.
 
 ```python
 def get_wav_info(wav_file):
