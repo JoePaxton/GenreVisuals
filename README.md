@@ -45,10 +45,21 @@ for filename in os.listdir(cwd):
 		subprocess.call(cmdline)
 
  ```
-**Implementation**
- 
-[convertAU.py]
-[genreVisuals.py]
+This snippet of code from [genreVisuals.py] gets the ```wav``` file information, which
+is the ```sound_info``` and the ```frame_rate```. The ```getframerate()``` function returns
+the sampling frequency and the ```fromstring``` function reads the frames of the audio. When
+you import ```wave``` you can access all of these functions. Going over the [wav] module will 
+explain these functions as well. 
+
+```python
+def get_wav_info(wav_file):
+    wav = wave.open(wav_file, 'r')
+    frames = wav.readframes(-1)
+    sound_info = pylab.fromstring(frames, 'Int16')
+    frame_rate = wav.getframerate()
+    wav.close()
+    return sound_info, frame_rate
+```
 
 **Resources**
   
@@ -56,13 +67,15 @@ for filename in os.listdir(cwd):
 2. [Echo Nest Fingerprinting]
 3. [GTZAN Analysis]
 4. [GTZAN Dataset]
+5. [wav]
 
 [GTZAN Genre Dataset Download]: http://opihi.cs.uvic.ca/sound/genres.tar.gz
 [GTZAN Analysis]: https://stevetjoa.com/static/p7.pdf
 [GTZAN Dataset]: http://marsyasweb.appspot.com/download/data_sets/
 [Echo Nest Fingerprinting]: https://www.ee.columbia.edu/~dpwe/pubs/EllisWJL10-ENfprint.pdf
 [convertAU.py]: https://github.com/JoePaxton/genreVisuals/blob/master/convertAU.py
-[genreVisuals.py]: https://github.com/JoePaxton/GenreVisuals/blob/master/genreVisuals.py
+[genreVisuals.py]: https://github.com/JoePaxton/genreVisuals/blob/master/genreVisuals.py
 [Comparison.docx]: https://github.com/JoePaxton/GenreVisuals/blob/master/Comparison.docx
 [genres.png]: https://github.com/JoePaxton/GenreVisuals/blob/master/genres.png
 [genres1.png]: https://github.com/JoePaxton/GenreVisuals/blob/master/genres1.png
+[wav]: https://docs.python.org/2/library/wave.html
