@@ -27,7 +27,7 @@ here: [genres.png]. This will illustrate the value of downloading the Word docum
 last 4 genres from the document are displayed in a screen shot as well in [genres1.png].
 
 I originally had intended to attempt to use Echo Nest's Musical Fingerprinter service to see if I could 
-identify the music clips from the GTZAN dataset. The fingerprinting algorithm gets a fingerprint for a song
+identify the music clips from the [GTZAN Dataset]. The fingerprinting algorithm gets a fingerprint for a song
 from the audio clip and the fingerprint can be used to find the song name, artist, year, etc. However, while 
 trying to get the codegen portion of this to work, I discovered that the Audio fingerprinting service was recently discontinued in January 2015. Echo Nest states that you can set up your own server (they have the source code 
 available to download), however, that appears to be a nontrivial task and beyond the scope of this research project.
