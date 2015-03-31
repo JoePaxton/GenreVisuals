@@ -23,7 +23,7 @@ After I had all of the saved ```specgram``` ```png``` files in the current worki
 spectrograms of each genre against each other by pulling 30 ```specgrams``` into a word document, [Comparison.docx].
 Due to the size of the file, it says it has been truncated for viewing, but you can download the document
 and view it locally. You can also see a subset of the spectrograms for the first 6 genres from the document
-here: [generes.png]. This will illustrate the value of downloading the Word document [Comparision.docx]. The
+here: [genres.png]. This will illustrate the value of downloading the Word document [Comparison.docx]. The
 last 4 genres from the document are displayed in a screen shot as well in [genres1.png].
 
 I originally had intended to attempt to use Echo Nest's Musical Fingerprinter service to see if I could 
