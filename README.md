@@ -35,7 +35,7 @@ available to download), however, that appears to be a nontrivial task and beyond
 
 **Converting Files**
 
-This snippet of code from [conversionAU.py] simply goes through your current working directory, ```cwd``` and finds
+This snippet of code from [convertAU.py] simply goes through your current working directory, ```cwd``` and finds
 all the files that end with ```au``` and converts them into a ```wav``` file assuming you have ```ffmpeg.exe```. 
 Make sure that your ```cmdline``` variable holds the correct path to your ```ffmpeg.exe``` program.
 
