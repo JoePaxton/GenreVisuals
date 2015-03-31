@@ -42,10 +42,10 @@ Make sure that your ```cmdline``` variable holds the correct path to your ```ffm
  ```python
 for filename in os.listdir(cwd):
     if filename.endswith('.au'):
-	count=count+1
-	cmdline = 'C:\Users\Joe\Anaconda\ffmpeg.exe -i ' + filename + '  ' + filename + '.wav'
-	print 'Constructed cmdline =', cmdline
-	subprocess.call(cmdline)
+        count=count+1
+        cmdline = 'C:\Users\Joe\Anaconda\ffmpeg.exe -i ' + filename + '  ' + filename + '.wav'
+        print 'Constructed cmdline =', cmdline
+        subprocess.call(cmdline)
 
  ```
 This snippet of code from [genreVisuals.py] gets the ```wav``` file information, which
