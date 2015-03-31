@@ -62,33 +62,33 @@ def graph_timbre_pitches(wav_file):
     plt.show()
     
 def selfSim(wav_file):
-	dist = 0.0
-	sound_info, frame_rate = get_wav_info(wav_file)
-	segments = audio.AudioAnalysis(wav_file).segments
-	segs = len(segments),len(segments)
-	timbreMatrix = n.zeros(segs)
-	pitchMatrix = n.zeros(segs)
+    dist = 0.0
+    sound_info, frame_rate = get_wav_info(wav_file)
+    segments = audio.AudioAnalysis(wav_file).segments
+    segs = len(segments),len(segments)
+    timbreMatrix = n.zeros(segs)
+    pitchMatrix = n.zeros(segs)
 	
-	for i in range(len(segments)):
-		for j in range(len(segments)):
-			dist = distance.euclidean(segments[i].pitches, segments[j].pitches)
-			pitchMatrix[i][j] = dist
+    for i in range(len(segments)):
+        for j in range(len(segments)):
+    	    dist = distance.euclidean(segments[i].pitches, segments[j].pitches)
+	    pitchMatrix[i][j] = dist
 	
-	for i in range(len(segments)):
-		for j in range(len(segments)):
-			dist = distance.euclidean(segments[i].timbre, segments[j].timbre)
-			timbreMatrix[i][j] = dist
+     for i in range(len(segments)):
+     	for j in range(len(segments)):
+     	     dist = distance.euclidean(segments[i].timbre, segments[j].timbre)
+     	     timbreMatrix[i][j] = dist
 			
-	return pitchMatrix, timbreMatrix
+    return pitchMatrix, timbreMatrix
 	
 def showSelfSim(filename, m):
-	plot = plt.imshow(m, origin = 'lower')
-	plot.set_cmap('hot')
+    plot = plt.imshow(m, origin = 'lower')
+    plot.set_cmap('hot')
 	
-	plot2 = plt.imshow(m, origin = 'lower')
-	plot2.set_cmap('hot')
+    plot2 = plt.imshow(m, origin = 'lower')
+    plot2.set_cmap('hot')
 	
-	plt.show()
+    plt.show()
 	
 def main():
     cwd = os.getcwd() # Get and verify the current working director (cwd)
@@ -97,14 +97,14 @@ def main():
 
     count = 0
     for filename in os.listdir(cwd):
-	    if filename.endswith('.wav'):
-	        count= count + 1
-	        print count, '- Using song file: ', filename
-	        graph_spectrogram(filename)
-	        graph_timbre_pitches(filename)
-	        t,p = selfSim(filename)
-	        showSelfSim(filename, t)
-	        showSelfSim(filename, p)
+        if filename.endswith('.wav'):
+            count= count + 1
+            print count, '- Using song file: ', filename
+            graph_spectrogram(filename)
+            graph_timbre_pitches(filename)
+            t,p = selfSim(filename)
+	    showSelfSim(filename, t)
+	    showSelfSim(filename, p)
             print '\nNumber of wave files processed = ',count
 			
 if __name__ == '__main__':
