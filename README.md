@@ -2,9 +2,9 @@
 
 **Purpose**
 
-Determine whether there were visual similarities by genre in spectrograms and other
-visuals by cycling through my directory that holds 30 songs in total, where there
-are 3 songs for 10 different genres.
+Determine whether there were discernable visual similarities by genre using 
+spectrograms and other visuals by cycling through my directory that holds 30 
+songs in total, where there are 3 songs from 10 different genres.
 
 **Background**
 
@@ -12,22 +12,25 @@ I wanted to see if there was a distinct difference between genres by investigati
 the use of ```specgram``` in ```python```. I got familiar with ```ffmpeg.exe``` so I could convert
  ```mp3``` files to ```wav``` as mono and not speaker. While doing some research for data sets
 for different genres, I stumbled upon the [GTZAN Dataset]. Once I downloaded the [GTZAN Genre Dataset Download], 
-I realized that their music in all of the genres were in the ```au``` format. In the [GTZAN Dataset],
-there are 10 genres with 100 songs each having an elapsed time of 30 seconds. In the [GTZAN Analysis],
-the [GTZAN Dataset] used the Echo Nest Musical Fingerprinter, which queries a database of about 30,000,000
-songs. The Audio fingerprinting service discontinued in January 2015. You could set up your own server
-with their old data if you wanted to. The fingerprinting algorithm gets a *fingerprint* for a song from 
-an audio clip and the *fingerprint* can be used to find the song name, artist, year, and etc. I selected 30 audio 
-files from the [GTZAN Dataset], 3 from each genre and wrote code to spin through the directory and convert
-all the ```au``` audio files to the ```wav``` format. The dataset was already in mono conversion as opposed
-to the stereo sound. Once the conversion was done, I was then able to write code to find all the ```wav``` 
-files in the current working directory and create spectrogram ```png``` files, two self similarity matrices
-for the song's ```timbre```  and ```pitch```, and a 3D plot displaying the ```timbre``` and ```pitch``` by 
- ```segments```. After I had all of the saved ```specgram``` ```png``` files in the current working directory,
-I compared the frequency of each genre against each other by pulling the 30 ```specgrams``` into a ```word``` document, 
-[Comparison.docx]. Since, this file was too big and got truncated, you can view two seperate ```png``` files that
-are screen shots of the ```word``` document. You can see the spectrograms for the first 6 genres here: [genres.png].
-The last 4 genres are displayed in a screen shot as well in [genres1.png].
+I realized that their music in all of the genres were in the ```au``` format, and could use ```ffmpeg.exe```
+to convert these to ```wav``` files. I selected 30 audio filed from the [GTZAN Dataset], 3 from each genre
+and wrote code to spin through the directory and convert all the ```au``` audio files to the ```wav``` 
+format. The dataset was already in mono, so the conversion from stereo to mono was not required. Once
+the conversion was done, I was then able to write code to find all the ```wav``` files in the current
+working directory and create spectrogram ```png``` files, two self-similarity matrices for the song's
+```timbre``` and ```pitch```, and a 3D plot displaying the ```timbre``` and ```pitches``` by ```segments```.
+After I had all of the saved ```specgram``` ```png``` files in the current working directory, I compared the
+spectrograms of each genre against each other by pulling 30 ```specgrams``` into a word document, [Comparison.docx].
+Due to the size of the file, it says it has been truncated for viewing, but you can download the document
+and view it locally. You can also see a subset of the spectrograms for the first 6 genres from the document
+here: [generes.png]. This will illustrate the value of downloading the Word document [Comparision.docx]. The
+last 4 genres from the document are displayed in a screen shot as well in [genres1.png].
+
+I originally had intended to attempt to use Echo Nest's Musical Fingerprinter service to see if I could 
+identify the music clips from the GTZAN dataset. The fingerprinting algorithm gets a fingerprint for a song
+from the audio clip and the fingerprint can be used to find the song name, artist, year, etc. However, while 
+trying to get the codegen portion of this to work, I discovered that the Audio fingerprinting service was recently discontinued in January 2015. Echo Nest states that you can set up your own server (they have the source code 
+available to download), however, that appears to be a nontrivial task and beyond the scope of this research project.
 
 
 **Converting Files**
@@ -38,11 +41,11 @@ Make sure that your ```cmdline``` variable holds the correct path to your ```ffm
 
  ```python
 for filename in os.listdir(cwd):
-	if filename.endswith('.au'):
-		count=count+1
-		cmdline = 'C:\Users\Joe\Anaconda\ffmpeg.exe -i ' + filename + '  ' + filename + '.wav'
-		print 'Constructed cmdline =', cmdline
-		subprocess.call(cmdline)
+    if filename.endswith('.au'):
+	count=count+1
+	cmdline = 'C:\Users\Joe\Anaconda\ffmpeg.exe -i ' + filename + '  ' + filename + '.wav'
+	print 'Constructed cmdline =', cmdline
+	subprocess.call(cmdline)
 
  ```
 This snippet of code from [genreVisuals.py] gets the ```wav``` file information, which
