@@ -13,7 +13,7 @@ the use of ```specgram``` in ```python```. I got familiar with ```ffmpeg.exe``` 
  ```mp3``` files to ```wav``` as mono and not speaker. While doing some research for data sets
 for different genres, I stumbled upon the [GTZAN Dataset]. Once I downloaded the [GTZAN Genre Dataset Download], 
 I realized that their music in all of the genres were in the ```au``` format, and could use ```ffmpeg.exe```
-to convert these to ```wav``` files. I selected 30 audio filed from the [GTZAN Dataset], 3 from each genre
+to convert these to ```wav``` files. I selected 30 audio files from the [GTZAN Dataset], 3 from each genre
 and wrote code to spin through the directory and convert all the ```au``` audio files to the ```wav``` 
 format. The dataset was already in mono, so the conversion from stereo to mono was not required. Once
 the conversion was done, I was then able to write code to find all the ```wav``` files in the current
@@ -26,7 +26,7 @@ and view it locally. You can also see a subset of the spectrograms for the first
 here: [genres.png]. This will illustrate the value of downloading the Word document [Comparison.docx]. The
 last 4 genres from the document are displayed in a screen shot as well in [genres1.png].
 
-I originally had intended to attempt to use Echo Nest's Musical Fingerprinter service to see if I could 
+I originally had intended to attempt to use the [Echo Nest Fingerprinting] service to see if I could 
 identify the music clips from the [GTZAN Dataset]. The fingerprinting algorithm gets a fingerprint for a song
 from the audio clip and the fingerprint can be used to find the song name, artist, year, etc. However, while 
 trying to get the codegen portion of this to work, I discovered that the Audio fingerprinting service was recently discontinued in January 2015. Echo Nest states that you can set up your own server (they have the source code 
