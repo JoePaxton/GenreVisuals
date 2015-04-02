@@ -73,6 +73,7 @@ def get_wav_info(wav_file):
 3. [GTZAN Analysis]
 4. [GTZAN Dataset]
 5. [wav]
+6. [Write WAVE]
 
 [GTZAN Genre Dataset Download]: http://opihi.cs.uvic.ca/sound/genres.tar.gz
 [GTZAN Analysis]: https://stevetjoa.com/static/p7.pdf
@@ -84,3 +85,4 @@ def get_wav_info(wav_file):
 [genres.png]: https://github.com/JoePaxton/GenreVisuals/blob/master/genres.png
 [genres1.png]: https://github.com/JoePaxton/GenreVisuals/blob/master/genres1.png
 [wav]: https://docs.python.org/2/library/wave.html
+[Write WAVE]: http://www.mathworks.com/help/matlab/ref/wavwrite.html  
